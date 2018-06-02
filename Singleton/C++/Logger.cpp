@@ -4,7 +4,7 @@ Logger::Logger(){
     //kosong
     //empty
 }
-static void Logger::getInstance(){
+static Logger& Logger::getInstance(){
     static Logger instance;
     return instance;
 }
