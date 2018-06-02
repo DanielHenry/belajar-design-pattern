@@ -5,11 +5,11 @@
 using namespace std;
 
 int main(){
-    Logger firstLog = Logger::getInstance();
+    Logger& firstLog = Logger::getInstance();
     firstlog.push("push 1 to firstlog");
     firstlog.push("push 2 to firstlog");
 
-    Logger secondlog = Logger::getInstance();
+    Logger& secondlog = Logger::getInstance();
     secondlog.push("push 1 to secondlog");
     secondlog.push("push 2 to secondlog");
 
