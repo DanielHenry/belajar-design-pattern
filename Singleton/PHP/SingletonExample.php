@@ -1,6 +1,6 @@
 <?php
 
-class Singleton{
+class Logger{
     private $list;
 
     private function __construct(){
@@ -10,7 +10,7 @@ class Singleton{
     public static function getInstance(){
         static $instance;
         if (!isset($instance)){
-            $instance = new Singleton();
+            $instance = new Logger();
         }
         return $instance;
     }
@@ -22,11 +22,11 @@ class Singleton{
     }
 }
 
-$firstlog = Singleton::getInstance();
+$firstlog = Logger::getInstance();
 $firstlog->push('push 1 to firstlog');
 $firstlog->push('push 2 to firstlog');
 
-$secondlog = Singleton::getInstance();
+$secondlog = Logger::getInstance();
 $secondlog->push('push 1 to secondlog');
 $secondlog->push('push 2 to secondlog');
 
