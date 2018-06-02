@@ -1,8 +1,8 @@
+#include "Logger.h"
 #include<iostream>
 #include<string>
 #include<vector>
 using namespace std;
-#include "Logger.h"
 
 int main(){
     Logger * firstLog;
