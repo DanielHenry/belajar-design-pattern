@@ -9,9 +9,11 @@ class Logger{
     private:
     vector<string> list;
     Logger();
+    Logger(Logger const&);
+    void operator=(Logger const&);
 
     public:
-    static void getPointer();
+    static Logger& getInstance();
     void push(string str);
     vector<string> getAll();
 };
